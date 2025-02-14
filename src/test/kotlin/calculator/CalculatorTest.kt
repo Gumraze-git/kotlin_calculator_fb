@@ -12,5 +12,6 @@ class CalculatorTest {
         assertThat(calculator.getSum("")).isEqualTo(0)
         assertThat(calculator.getSum("1,2")).isEqualTo(3)
         assertThat(calculator.getSum("1,2,3")).isEqualTo(6)
+        assertThat(calculator.getSum("1,2:3")).isEqualTo(6)
     }
 }
