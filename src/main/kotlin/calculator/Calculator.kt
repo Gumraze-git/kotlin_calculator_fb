@@ -12,8 +12,8 @@ class Calculator {
             return 0
         }
 
-        for (number in text.split(",")) { // 쉼표로 구분된 컬렉션을 순환
-            total += number.toInt() // 컬렉션의 String을 Int로 변환하여 변수에 합산
+        for (number in text.split(Regex("[,:]"))) {
+            total += number.toInt()
         }
         return total
     }
