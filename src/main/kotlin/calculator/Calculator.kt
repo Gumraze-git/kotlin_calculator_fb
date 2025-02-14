@@ -5,8 +5,13 @@ package calculator
 // ex) "" => 0, "1,2" => 3, "1,2,3" => 6, "1,2:3" => 6
 class Calculator {
 
-    fun getSum(text: String): Int {
+    fun getSum(text: String?): Int {
         var total = 0
+
+        if (text.isNullOrEmpty()) {
+            return 0
+        }
+
         for (number in text.split(",")) { // 쉼표로 구분된 컬렉션을 순환
             total += number.toInt() // 컬렉션의 String을 Int로 변환하여 변수에 합산
         }
